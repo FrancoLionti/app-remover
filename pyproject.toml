@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "app-remover"
+version = "0.1.0"
+description = "Inspect, preview and remove Linux applications across package managers"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Franco Lionti"}]
+dependencies = []
+
+[project.scripts]
+desinstalar = "app_remover.cli:main"
+app-remover = "app_remover.cli:main"
+
+[tool.setuptools]
+packages = ["app_remover"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

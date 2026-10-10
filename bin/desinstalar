@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+"""Checkout launcher; resolves the checkout even when installed as a symlink."""
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from app_remover.cli import main
+
+raise SystemExit(main())
